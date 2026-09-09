@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>時給から年収・月収を計算 | 扶養の壁までの残り時間も分かる</title>
+<meta name="description" content="時給・1日の勤務時間・週の勤務日数を入れるだけで、月収・年収の目安と、103万・130万・150万の壁を超えないための月間労働時間の上限をまとめて計算。無料・登録不要のバイト代シミュレーターです。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://webtools-labs.com/jikyu-nenshu-keisan/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2370765779014113" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NKK5TXCQEK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NKK5TXCQEK');
+</script>
+<script>
+(function () {
+  var fired = false;
+  function fireOnce() {
+    if (fired) return;
+    fired = true;
+    if (typeof gtag === 'function') gtag('event', 'tool_used', { tool_name: document.title });
+  }
+  document.addEventListener('input', fireOnce, true);
+  document.addEventListener('change', fireOnce, true);
+})();
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f766e'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif'%3E%EF%BF%A5%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="webtools-labs">
+<meta property="og:title" content="時給から年収・月収を計算 | 扶養の壁までの残り時間も分かる">
+<meta property="og:description" content="時給・1日の勤務時間・週の勤務日数から、月収・年収の目安と扶養の壁までの残り時間をまとめて計算できます。">
+<meta property="og:url" content="https://webtools-labs.com/jikyu-nenshu-keisan/">
+<meta property="og:image" content="https://webtools-labs.com/jikyu-nenshu-keisan/og-image.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="時給から年収・月収 計算ツール">
+<meta name="twitter:description" content="時給・勤務時間から月収・年収と扶養の壁までの残り時間を計算できる無料ツール。">
+<meta name="twitter:image" content="https://webtools-labs.com/jikyu-nenshu-keisan/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "時給から年収・月収 計算ツール",
+  "url": "https://webtools-labs.com/jikyu-nenshu-keisan/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "時給・1日の勤務時間・週の勤務日数から、月収・年収の目安と扶養の壁を超えないための月間労働時間の上限をまとめて計算できる無料ツール。",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+  "inLanguage": "ja"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "月収・年収はどうやって計算していますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "「時給 × 1日の勤務時間 × 週の勤務日数」で週の労働時間を求め、月収は週の労働時間×時給×(52週÷12ヶ月)、年収は週の労働時間×時給×52週で計算しています。祝日や欠勤による変動は考慮していない、平均的な目安の金額です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "扶養の壁を超えないためには時給ごとに何時間まで働けますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "時給が高いほど、同じ壁（103万・130万・150万円）に達するまでの労働時間は短くなります。このツールでは入力した時給から、それぞれの壁を超えないための月間労働時間の上限を自動計算し、早見表でも代表的な時給での上限時間を確認できます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "深夜勤務や祝日出勤の割増は考慮されていますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "このツールは基本の時給のみで計算するシンプルな設計のため、深夜・休日の割増分は含んでいません。割増を含めて計算したい場合は、当サイトの残業代計算ツールと合わせてご利用ください。" }
+    },
+    {
+      "@type": "Question",
+      "name": "複数のバイト先で働いている場合はどう計算すればいいですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "扶養の壁は勤務先ごとではなく、すべての収入を合算した金額で判定されます。複数のバイト先がある場合は、それぞれの月収を計算して合計した上で、扶養の壁チェッカーで年間の合計収入を確認することをおすすめします。" }
+    }
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #ffffff;
+  --surface-2: #f7f7f7;
+  --ink: #1a1a1a;
+  --muted: #767676;
+  --line: #e3e3e3;
+  --accent: #0f766e;
+  --best-bg: #f0f8f6;
+  --warn-bg: #fff7ed;
+  --warn-ink: #9a5b00;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+header.masthead { margin-bottom: 1.5rem; }
+h1 {
+  font-weight: 700;
+  font-size: clamp(1.4rem, 4.5vw, 1.7rem);
+  margin: 0 0 0.7rem;
+  letter-spacing: 0.01em;
+}
+p.lede { color: var(--muted); margin: 0; max-width: 60ch; font-size: 0.95rem; }
+.updated-note { display: block; margin-top: 0.9rem; font-size: 0.78rem; color: var(--muted); }
+
+.notice-box {
+  background: var(--warn-bg); color: var(--warn-ink); border-radius: 8px;
+  padding: 0.9rem 1.1rem; font-size: 0.85rem; margin-bottom: 2rem;
+}
+
+section { margin-bottom: 2.5rem; }
+h2 { font-size: 1.05rem; font-weight: 700; margin: 0 0 1rem; }
+
+.field-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; }
+.field { flex: 1; min-width: 160px; }
+.field label { display: block; font-size: 0.83rem; color: var(--muted); margin-bottom: 0.35rem; }
+.field input[type="number"] {
+  width: 100%; font-variant-numeric: tabular-nums; font-size: 1.05rem; font-family: inherit;
+  padding: 0.55rem 0.7rem; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--bg); color: var(--ink);
+}
+.field input:focus { outline: none; border-color: var(--accent); }
+.field-hint { font-size: 0.76rem; color: var(--muted); margin-top: 0.3rem; }
+
+.summary-cards { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+.summary-card {
+  flex: 1; min-width: 180px; background: var(--best-bg); border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+.summary-card .label { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.3rem; }
+.summary-card .value { font-size: 1.4rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.summary-card .sub { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+
+table.compare { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+table.compare th, table.compare td {
+  padding: 0.55rem 0.5rem; text-align: right; border-bottom: 1px solid var(--line); vertical-align: top;
+}
+table.compare th:first-child, table.compare td:first-child { text-align: left; }
+table.compare thead th { color: var(--muted); font-weight: 500; font-size: 0.78rem; }
+table.compare td.num { font-variant-numeric: tabular-nums; }
+tr.total td { font-weight: 700; }
+tr.total { background: var(--best-bg); }
+tr.warn td { color: var(--warn-ink); }
+
+.ref-table { overflow-x: auto; }
+.ref-table table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 460px; }
+.ref-table th, .ref-table td { padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--line); text-align: left; }
+.ref-table td.num { font-variant-numeric: tabular-nums; text-align: right; }
+
+.disclaimer { font-size: 0.78rem; color: var(--muted); margin-top: 1rem; }
+
+.share-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.1rem; }
+.share-btn {
+  display: inline-flex; align-items: center; padding: 0.5rem 1rem; border-radius: 999px;
+  color: #fff; text-decoration: none; font-size: 0.82rem; font-weight: 700;
+}
+.share-btn:hover { opacity: 0.85; }
+.share-x { background: #000; }
+.share-line { background: #06c755; }
+.share-fb { background: #1877f2; }
+.share-hatena { background: #00a4de; }
+
+.ad-slot { margin: 2.5rem 0; text-align: center; min-height: 100px; }
+
+.pr-box {
+  border: 1px solid var(--line); border-radius: 10px; padding: 1.1rem 1.2rem;
+  margin: 2.5rem 0;
+}
+.pr-box .pr-label {
+  display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em;
+  color: var(--muted); border: 1px solid var(--line); border-radius: 4px;
+  padding: 0.05rem 0.4rem; margin-bottom: 0.7rem;
+}
+.pr-box p.pr-lede { color: var(--ink); font-size: 0.9rem; margin: 0 0 0.9rem; max-width: none; }
+.pr-box .pr-banner { text-align: center; }
+
+.contact-box textarea {
+  width: 100%; min-height: 6rem; font-family: inherit; font-size: 0.92rem;
+  padding: 0.7rem; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink);
+  resize: vertical; margin-bottom: 0.6rem;
+}
+.contact-box input[type="email"] {
+  width: 100%; font-family: inherit; font-size: 0.92rem;
+  padding: 0.6rem 0.7rem; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink);
+  margin-bottom: 0.6rem;
+}
+.contact-box textarea:focus, .contact-box input:focus { outline: none; border-color: var(--accent); }
+.contact-box button {
+  font-family: inherit; font-weight: 700; font-size: 0.9rem; padding: 0.6rem 1.4rem;
+  border: none; border-radius: 6px; background: var(--accent); color: #fff; cursor: pointer;
+}
+.contact-box button:disabled { opacity: 0.5; cursor: not-allowed; }
+.contact-status { font-size: 0.85rem; margin-top: 0.6rem; }
+.contact-status.ok { color: var(--accent); }
+.contact-status.err { color: #b91c1c; }
+
+footer.site-footer {
+  margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line);
+  font-size: 0.78rem; color: var(--muted);
+}
+footer.site-footer p { margin: 0 0 0.5rem; }
+footer.site-footer a { color: var(--accent); }
+
+.faq-item { border-bottom: 1px solid var(--line); padding: 0.9rem 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item summary {
+  cursor: pointer; font-weight: 700; font-size: 0.92rem; list-style: none;
+  position: relative; padding-right: 1.6rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+'; position: absolute; right: 0; top: 0; color: var(--accent); font-weight: 700; font-size: 1.1rem;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item p { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.88rem; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <h1>時給から年収・月収を計算</h1>
+    <p class="lede">時給・1日の勤務時間・週の勤務日数を入れるだけで、月収・年収の目安と、扶養の壁までの残り時間が分かります。</p>
+    <span class="updated-note">壁の基準額 最終確認日: 2026年9月9日</span>
+  </header>
+
+  <div class="notice-box">
+    ⚠️ このツールは基本の時給のみで計算する簡易シミュレーターです。深夜・休日の割増分は含んでいません。割増込みで計算したい場合は残業代計算ツールも合わせてご利用ください。
+  </div>
+
+  <section>
+    <h2>月収・年収を計算</h2>
+    <div class="field-row">
+      <div class="field">
+        <label for="hourlyWage">時給（円）</label>
+        <input type="number" id="hourlyWage" min="1" step="10" value="1000">
+      </div>
+      <div class="field">
+        <label for="hoursPerDay">1日の勤務時間（時間）</label>
+        <input type="number" id="hoursPerDay" min="0" step="0.5" value="5">
+      </div>
+      <div class="field">
+        <label for="daysPerWeek">週の勤務日数（日）</label>
+        <input type="number" id="daysPerWeek" min="0" max="7" step="1" value="3">
+      </div>
+    </div>
+
+    <div class="summary-cards" id="summaryCards"></div>
+
+    <div style="overflow-x:auto">
+      <table class="compare">
+        <thead>
+          <tr><th>扶養の壁</th><th class="num">月の上限時間</th><th class="num">今の予定との差</th></tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+      </table>
+    </div>
+    <p class="disclaimer">月収は「週の労働時間×時給×52週÷12ヶ月」、年収は「週の労働時間×時給×52週」で計算した平均的な目安です。壁の上限時間は、今の勤務日数・時間の内訳を変えずに時給だけを基準にした場合の目安であり、実際の働き方に応じて調整してください。</p>
+    <div class="share-row" id="shareRow">
+      <a class="share-btn share-x" id="shareX" href="#" target="_blank" rel="noopener">𝕏でシェア</a>
+      <a class="share-btn share-line" id="shareLine" href="#" target="_blank" rel="noopener">LINEで送る</a>
+      <a class="share-btn share-fb" id="shareFb" href="#" target="_blank" rel="noopener">Facebookでシェア</a>
+      <a class="share-btn share-hatena" id="shareHatena" href="#" target="_blank" rel="noopener">はてブする</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>時給別 扶養の壁 月間労働時間の早見表</h2>
+    <div class="ref-table">
+      <table>
+        <thead><tr><th>時給</th><th class="num">103万の壁</th><th class="num">130万の壁</th><th class="num">150万の壁</th></tr></thead>
+        <tbody id="refTableBody"></tbody>
+      </table>
+    </div>
+    <p class="disclaimer">各セルは「その時給で1年間働いた場合、壁を超えないための月あたりの労働時間の上限」の目安です。</p>
+  </section>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-2370765779014113"
+      data-ad-slot="3021985784"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="pr-box">
+    <span class="pr-label">PR</span>
+    <p class="pr-lede">バイト代の管理と一緒に、お金の使い方も見直してみませんか。年会費無料で貯まりやすいカードなら、日々の支払いがそのまま還元につながります。</p>
+    <div class="pr-banner">
+      <script type='text/javascript' src='https://ad-verification.a8.net/ad/js/brandsafe.js'></script>
+      <div id='div_admane_async_1734_658_2972'>
+      <script type='text/javascript'>
+      <!--
+      brandsafe_js_async('//ad-verification.a8.net/ad', '_site=1734&_article=658&_link=2972&_image=3219&_ns=1&sad=s00000015110002', '260907514413', '4BC5IY+6TW2E2+38L8+BXYE9');
+      //-->
+      </script>
+      </div>
+      <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4BC5IY+6TW2E2+38L8+BXYE9" alt="">
+    </div>
+  </div>
+
+  <section>
+    <h2>よくある質問</h2>
+    <details class="faq-item">
+      <summary>月収・年収はどうやって計算していますか？</summary>
+      <p>「時給 × 1日の勤務時間 × 週の勤務日数」で週の労働時間を求め、月収は週の労働時間×時給×(52週÷12ヶ月)、年収は週の労働時間×時給×52週で計算しています。祝日や欠勤による変動は考慮していない、平均的な目安の金額です。</p>
+    </details>
+    <details class="faq-item">
+      <summary>扶養の壁を超えないためには時給ごとに何時間まで働けますか？</summary>
+      <p>時給が高いほど、同じ壁（103万・130万・150万円）に達するまでの労働時間は短くなります。このツールでは入力した時給から、それぞれの壁を超えないための月間労働時間の上限を自動計算し、早見表でも代表的な時給での上限時間を確認できます。</p>
+    </details>
+    <details class="faq-item">
+      <summary>深夜勤務や祝日出勤の割増は考慮されていますか？</summary>
+      <p>このツールは基本の時給のみで計算するシンプルな設計のため、深夜・休日の割増分は含んでいません。割増を含めて計算したい場合は、当サイトの残業代計算ツールと合わせてご利用ください。</p>
+    </details>
+    <details class="faq-item">
+      <summary>複数のバイト先で働いている場合はどう計算すればいいですか？</summary>
+      <p>扶養の壁は勤務先ごとではなく、すべての収入を合算した金額で判定されます。複数のバイト先がある場合は、それぞれの月収を計算して合計した上で、扶養の壁チェッカーで年間の合計収入を確認することをおすすめします。</p>
+    </details>
+  </section>
+
+  <section class="contact-box">
+    <h2>ご意見・追加してほしい機能</h2>
+    <p class="lede" style="margin-bottom:0.9rem;">気づいたことや、あったら便利な機能があれば教えてください。</p>
+    <form id="contactForm">
+      <input type="email" id="contactEmail" placeholder="返信が必要な場合はメールアドレス（任意）">
+      <textarea id="contactMessage" placeholder="ご意見・ご要望をどうぞ" required></textarea>
+      <button type="submit" id="contactSubmit">送信する</button>
+      <p class="contact-status" id="contactStatus"></p>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <p>本ツールの計算結果は一般的な前提にもとづく概算であり、正確性を保証するものではありません。実際の月収・年収は勤務先の給与規定・シフトにより異なる場合があります。正確な金額は給与明細・勤務先の担当部署でご確認ください。</p>
+    <p>あわせて使える：
+      <a href="https://webtools-labs.com/furima-hikaku-keisan/">フリマ手数料計算・比較ツール</a> ／
+      <a href="https://webtools-labs.com/furima-hasso-hikaku/">フリマ配送方法・送料比較ツール</a> ／
+      <a href="https://webtools-labs.com/furima-tedori-simulator/">フリマ手取りシミュレーター</a> ／
+      <a href="https://webtools-labs.com/yukyu-hiyou-keisan/">有給休暇 付与日数計算ツール</a> ／
+      <a href="https://webtools-labs.com/revolving-risoku-keisan/">リボ払い・分割払い 実質利息計算ツール</a> ／
+      <a href="https://webtools-labs.com/taishoku-yukyu-keisan/">退職時の有給消化シミュレーター</a> ／
+      <a href="https://webtools-labs.com/fuyou-no-kabe-keisan/">扶養の壁チェッカー</a> ／
+      <a href="https://webtools-labs.com/tedori-keisan/">手取り計算ツール</a> ／
+      <a href="https://webtools-labs.com/taishokukin-zei-keisan/">退職金の税金計算ツール</a> ／
+      <a href="https://webtools-labs.com/sankyu-ikuji-teate-keisan/">産休・育休手当金シミュレーター</a> ／
+      <a href="https://webtools-labs.com/zangyodai-keisan/">残業代計算ツール</a> ／
+      <a href="https://webtools-labs.com/shitsugyo-hoken-keisan/">失業保険（基本手当）シミュレーター</a>
+    </p>
+    <p>当サイトは広告を掲載する場合があります。</p>
+    <p><a href="https://webtools-labs.com/about/">運営者情報</a> ／ <a href="https://webtools-labs.com/privacy/">プライバシーポリシー</a></p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  function yen(n) { return Math.round(n).toLocaleString('ja-JP') + '円'; }
+
+  function calc(wage, hoursPerDay, daysPerWeek) {
+    var weeklyHours = hoursPerDay * daysPerWeek;
+    var monthlyIncome = wage * weeklyHours * (52 / 12);
+    var annualIncome = wage * weeklyHours * 52;
+    return { weeklyHours: weeklyHours, monthlyIncome: monthlyIncome, annualIncome: annualIncome };
+  }
+
+  function wallMonthlyHours(wage, wall) {
+    return wall / wage / 12;
+  }
+
+  var hourlyWageInput = document.getElementById('hourlyWage');
+  var hoursPerDayInput = document.getElementById('hoursPerDay');
+  var daysPerWeekInput = document.getElementById('daysPerWeek');
+  var summaryCards = document.getElementById('summaryCards');
+  var resultBody = document.getElementById('resultBody');
+  var refTableBody = document.getElementById('refTableBody');
+  var shareX = document.getElementById('shareX');
+  var shareLine = document.getElementById('shareLine');
+  var shareFb = document.getElementById('shareFb');
+  var shareHatena = document.getElementById('shareHatena');
+
+  var WALLS = [
+    { label: '103万の壁', value: 1030000 },
+    { label: '130万の壁', value: 1300000 },
+    { label: '150万の壁', value: 1500000 }
+  ];
+
+  function setShareLinks(text, url) {
+    shareX.href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
+    shareLine.href = 'https://line.me/R/msg/text/?' + encodeURIComponent(text + '\n' + url);
+    shareFb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&quote=' + encodeURIComponent(text);
+    shareHatena.href = 'https://b.hatena.ne.jp/entry/panel/?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(text);
+  }
+
+  function render() {
+    var wage = Math.max(1, Number(hourlyWageInput.value) || 1);
+    var hoursPerDay = Math.max(0, Number(hoursPerDayInput.value) || 0);
+    var daysPerWeek = Math.max(0, Number(daysPerWeekInput.value) || 0);
+    var r = calc(wage, hoursPerDay, daysPerWeek);
+    var currentMonthlyHours = r.weeklyHours * (52 / 12);
+
+    summaryCards.innerHTML =
+      '<div class="summary-card"><div class="label">週の収入</div><div class="value">' + yen(wage * r.weeklyHours) + '</div><div class="sub">週' + r.weeklyHours + '時間</div></div>' +
+      '<div class="summary-card"><div class="label">月収の目安</div><div class="value">' + yen(r.monthlyIncome) + '</div><div class="sub">月あたり約' + currentMonthlyHours.toFixed(1) + '時間</div></div>' +
+      '<div class="summary-card"><div class="label">年収の目安</div><div class="value">' + yen(r.annualIncome) + '</div><div class="sub">週' + daysPerWeek + '日ペースが続く場合</div></div>';
+
+    resultBody.innerHTML = WALLS.map(function (wall) {
+      var limitHours = wallMonthlyHours(wage, wall.value);
+      var diff = limitHours - currentMonthlyHours;
+      var rowClass = diff < 0 ? 'warn' : '';
+      var diffText = diff < 0
+        ? ('あと' + Math.abs(diff).toFixed(1) + '時間 超過')
+        : (diff.toFixed(1) + '時間 余裕あり');
+      return '<tr class="' + rowClass + '"><td>' + wall.label + '（年' + (wall.value / 10000) + '万円）</td><td class="num">' + limitHours.toFixed(1) + '時間</td><td class="num">' + diffText + '</td></tr>';
+    }).join('');
+
+    var shareText = '時給' + wage.toLocaleString('ja-JP') + '円・週' + r.weeklyHours + '時間で計算したら\n' +
+      '月収の目安は ' + yen(r.monthlyIncome) + '(年収 ' + yen(r.annualIncome) + ')でした\n\n' +
+      '時給から年収・月収を計算';
+    setShareLinks(shareText, 'https://webtools-labs.com/jikyu-nenshu-keisan/');
+  }
+
+  var REF_WAGES = [900, 1000, 1050, 1100, 1200, 1300, 1500];
+  refTableBody.innerHTML = REF_WAGES.map(function (w) {
+    return '<tr><td>' + yen(w) + '</td><td class="num">' + wallMonthlyHours(w, 1030000).toFixed(1) + '時間</td><td class="num">' + wallMonthlyHours(w, 1300000).toFixed(1) + '時間</td><td class="num">' + wallMonthlyHours(w, 1500000).toFixed(1) + '時間</td></tr>';
+  }).join('');
+
+  hourlyWageInput.addEventListener('input', render);
+  hoursPerDayInput.addEventListener('input', render);
+  daysPerWeekInput.addEventListener('input', render);
+
+  render();
+
+  var WEB3FORMS_ACCESS_KEY = '4551c9fd-4327-4bd4-97e0-8b93d85fd077';
+  var contactForm = document.getElementById('contactForm');
+  var contactStatus = document.getElementById('contactStatus');
+  var contactSubmit = document.getElementById('contactSubmit');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    contactSubmit.disabled = true;
+    contactStatus.textContent = '送信中...';
+    contactStatus.className = 'contact-status';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: '時給から年収・月収を計算ツールへのお問い合わせ',
+        email: document.getElementById('contactEmail').value || 'noreply@example.com',
+        message: document.getElementById('contactMessage').value
+      })
+    }).then(function (res) { return res.json(); }).then(function (data) {
+      contactSubmit.disabled = false;
+      if (data.success) {
+        contactStatus.textContent = '送信しました。ありがとうございます！';
+        contactStatus.className = 'contact-status ok';
+        contactForm.reset();
+      } else {
+        contactStatus.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+        contactStatus.className = 'contact-status err';
+      }
+    }).catch(function () {
+      contactSubmit.disabled = false;
+      contactStatus.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+      contactStatus.className = 'contact-status err';
+    });
+  });
+})();
+</script>
+</body>
+</html>
