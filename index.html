@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>時給から年収・月収を計算 | 扶養の壁までの残り時間も分かる</title>
-<meta name="description" content="時給・1日の勤務時間・週の勤務日数を入れるだけで、月収・年収の目安と、100万・130万・132万・160万の壁（令和7年度税制改正に対応）を超えないための月間労働時間の上限をまとめて計算。無料・登録不要のバイト代シミュレーターです。">
+<meta name="description" content="時給・1日の勤務時間・週の勤務日数を入れるだけで、月収・年収の目安と、100万・130万・132万・150万・160万の壁（令和7年度税制改正、19〜22歳の150万円基準に対応）を超えないための月間労働時間の上限をまとめて計算。無料・登録不要のバイト代シミュレーターです。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://webtools-labs.com/jikyu-nenshu-keisan/">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2370765779014113" crossorigin="anonymous"></script>
@@ -67,7 +67,7 @@
     {
       "@type": "Question",
       "name": "扶養の壁を超えないためには時給ごとに何時間まで働けますか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "時給が高いほど、同じ壁（100万・130万・132万・160万円）に達するまでの労働時間は短くなります。このツールでは入力した時給から、それぞれの壁を超えないための月間労働時間の上限を自動計算し、早見表でも代表的な時給での上限時間を確認できます。" }
+      "acceptedAnswer": { "@type": "Answer", "text": "時給が高いほど、同じ壁（100万・130万・132万・150万・160万円）に達するまでの労働時間は短くなります。19〜22歳の学生の場合、社会保険の扶養の基準は130万円ではなく150万円です（2025年10月から）。このツールでは入力した時給から、それぞれの壁を超えないための月間労働時間の上限を自動計算し、早見表でも代表的な時給での上限時間を確認できます。" }
     },
     {
       "@type": "Question",
@@ -260,7 +260,7 @@ footer.site-footer a { color: var(--accent); }
   <header class="masthead">
     <h1>時給から年収・月収を計算</h1>
     <p class="lede">時給・1日の勤務時間・週の勤務日数を入れるだけで、月収・年収の目安と、扶養の壁までの残り時間が分かります。</p>
-    <span class="updated-note">壁の基準額 最終確認日: 2026年10月2日（令和7年度税制改正で103万→132万円、150万→160万円に対応済み）</span>
+    <span class="updated-note">壁の基準額 最終確認日: 2026年10月2日（令和7年度税制改正で103万→132万円・配偶者特別控除150万→160万円、19〜22歳の社会保険の扶養150万円に対応済み）</span>
   </header>
 
   <div class="notice-box">
@@ -313,7 +313,7 @@ footer.site-footer a { color: var(--accent); }
     <h2>時給別 扶養の壁 月間労働時間の早見表</h2>
     <div class="ref-table">
       <table>
-        <thead><tr><th>時給</th><th class="num">100万の壁</th><th class="num">130万の壁</th><th class="num">132万の壁</th><th class="num">160万の壁</th></tr></thead>
+        <thead><tr><th>時給</th><th class="num">100万の壁</th><th class="num">130万の壁</th><th class="num">132万の壁</th><th class="num">150万の壁</th><th class="num">160万の壁</th></tr></thead>
         <tbody id="refTableBody"></tbody>
       </table>
     </div>
@@ -382,7 +382,7 @@ footer.site-footer a { color: var(--accent); }
     </details>
     <details class="faq-item">
       <summary>扶養の壁を超えないためには時給ごとに何時間まで働けますか？</summary>
-      <p>時給が高いほど、同じ壁（100万・130万・132万・160万円）に達するまでの労働時間は短くなります。このツールでは入力した時給から、それぞれの壁を超えないための月間労働時間の上限を自動計算し、早見表でも代表的な時給での上限時間を確認できます。</p>
+      <p>時給が高いほど、同じ壁（100万・130万・132万・150万・160万円）に達するまでの労働時間は短くなります。19〜22歳の学生の場合、社会保険の扶養の基準は130万円ではなく150万円です（2025年10月から）。このツールでは入力した時給から、それぞれの壁を超えないための月間労働時間の上限を自動計算し、早見表でも代表的な時給での上限時間を確認できます。</p>
     </details>
     <details class="faq-item">
       <summary>深夜勤務や祝日出勤の割増は考慮されていますか？</summary>
@@ -477,8 +477,9 @@ footer.site-footer a { color: var(--accent); }
   var WALLS = [
     // 令和7年度税制改正後の基準（fuyou-no-kabe-keisanと揃える）
     { label: '100万の壁（住民税）', value: 1000000 },
-    { label: '130万の壁（社会保険の扶養）', value: 1300000 },
+    { label: '130万の壁（社会保険の扶養、18歳以下・23歳以上）', value: 1300000 },
     { label: '132万の壁（所得税、旧103万）', value: 1320000 },
+    { label: '150万の壁（社会保険の扶養、19〜22歳）', value: 1500000 },
     { label: '160万の壁（配偶者特別控除、旧150万）', value: 1600000 }
   ];
 
